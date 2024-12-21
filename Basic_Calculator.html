@@ -17,16 +17,16 @@
    <option>Substraction</option>
    </select>
    <br><br><br><br>
-   <p>Input first value</p>
-   <input type="number">
-   <p>Input second value</p>
-   <input type="number">
-   <br><br><br><br> 
-   <button>Press to calculate</button>
-   <br><br><br><br> 
-   <p>Result</p>
-   <div class="center"><p id="result"></p></div>
-   <br><br><br>   <br><br><br><br>
+   <div class="container">
+    <input type="number" id="value1" placeholder="Enter first value">
+    <br><br><br><br> 
+    <input type="number" id="value2" placeholder="Enter second value">
+    <br><br><br><br> 
+    <button onclick="multiplyValues()">Multiply</button>
+    <br><br><br><br> 
+    <div class="result" id="result"></div>
+   </div>
+    <br><br><br><br>
     <button onclick="pageReset()">Reset</button>
     <script src="Basic_Calculator.js"></script>
   </body>
