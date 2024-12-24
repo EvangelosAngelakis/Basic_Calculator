@@ -6,13 +6,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1000px 1000px;
+    font-size: x-large;
 }
-.container {
-    max-width: 300px;
-    margin: 0 auto;
-    text-align: center;
-}
-#dText0, #dText1 {
+#operation, #dText0 {
     font-weight: bolder;
     font-size: xx-large;
 }
@@ -21,11 +17,12 @@ body {
     border: solid black;
     border-radius: 5px;
 }
-#dButton {
+#execute {
     border: solid black;
     border-radius: 10px;
+    font-size: x-large;
 }
-.result {
+#result {
     border: 1px solid rgb(116, 116, 116);
     padding: 15px;
     margin-bottom: 10px;
@@ -34,6 +31,9 @@ body {
     align-items: center;
     text-align: center;
     margin: 20px auto;
+    border: solid black;
+    border-radius: 10px;
+    border-h
 }
 .center {
     display: flex;

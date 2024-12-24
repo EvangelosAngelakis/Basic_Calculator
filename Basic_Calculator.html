@@ -9,23 +9,27 @@
    <br>
    <a id="dText0">Calculator</a>
    <br><br><br><br>   
-   <select>
-   <option selected disabled>Select Option</option>
-   <option>Times</option>
-   <option>Division</option>
-   <option>Addition</option>
-   <option>Substraction</option>
-   </select>
-   <br><br><br><br>
-   <div class="container">
-    <input type="number" id="value1" placeholder="Enter first value">
-    <br><br><br><br> 
-    <input type="number" id="value2" placeholder="Enter second value">
-    <br><br><br><br> 
-    <button onclick="multiplyValues()">Multiply</button>
-    <br><br><br><br> 
-    <div class="result" id="result"></div>
-   </div>
+   <label for="operation">Choose an operation:</label>
+   <select id="operation">
+    <option value="add">Add</option>
+    <option value="subtract">Subtract</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+</select>
+   <br><br><br>
+   <label for="input1">Enter the first number:</label>
+   <br>
+   <input type="number" id="input1" />
+   <br><br><br>
+   <label for="input2">Enter the second number:</label>
+   <br>
+   <input type="number" id="input2" />
+   <br>
+   <br><br><br>
+   <button id="execute">Execute</button>
+   <br><br><br>
+   <p>Result:</p>
+   <p id="result"> </p>
     <br><br><br><br>
     <button onclick="pageReset()">Reset</button>
     <script src="Basic_Calculator.js"></script>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px 1000px;
+    font-size: x-large;
+}
+#operation, #dText0 {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+#dImage {
+    margin-top: -100px;
+    border: solid black;
+    border-radius: 5px;
+}
+#execute {
+    border: solid black;
+    border-radius: 10px;
+    font-size: x-large;
+}
+#result {
+    border: 1px solid rgb(116, 116, 116);
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    border: solid black;
+    border-radius: 10px;
+    border-h
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <br>
+    <br>
+   <br>
+   <a id="dText0">Calculator</a>
+   <br><br><br><br>   
+   <label for="operation">Choose an operation:</label>
+   <select id="operation">
+    <option value="add">Add</option>
+    <option value="subtract">Subtract</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+</select>
+   <br><br><br>
+   <label for="input1">Enter the first number:</label>
+   <br>
+   <input type="number" id="input1" />
+   <br><br><br>
+   <label for="input2">Enter the second number:</label>
+   <br>
+   <input type="number" id="input2" />
+   <br>
+   <br><br><br>
+   <button id="execute">Execute</button>
+   <br><br><br>
+   <p>Result:</p>
+   <p id="result"> </p>
+    <br><br><br><br>
+    <button onclick="pageReset()">Reset</button>
+    <script>
+ const operationSelect = document.getElementById("operation");
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const executeButton = document.getElementById("execute");
+const resultDisplay = document.getElementById("result");
+
+executeButton.addEventListener("click", () => {
+
+    const operation = operationSelect.value;
+    const num1 = parseFloat(input1.value);
+    const num2 = parseFloat(input2.value);
+
+
+    if (isNaN(num1) || isNaN(num2)) {
+        resultDisplay.textContent = "Please enter valid numbers.";
+        return;
+    }
+
+    let result;
+
+
+    switch (operation) {
+        case "add":
+            result = num1 + num2;
+            break;
+        case "subtract":
+            result = num1 - num2;
+            break;
+        case "multiply":
+            result = num1 * num2;
+            break;
+        case "divide":
+            if (num2 === 0) {
+                result = "Error: Division by zero.";
+            } else {
+                result = num1 / num2;
+            }
+            break;
+        default:
+            result = "Invalid operation.";
+    }
+
+
+    resultDisplay.textContent = ` ${result}`;
+});
+
+function pageReset(){
+    location.reload()
+};
+    </script>
+  </body>
+</html>
